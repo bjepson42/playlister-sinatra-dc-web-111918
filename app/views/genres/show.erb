@@ -5,10 +5,26 @@
 </head>
 <body>
 	<h1><%=@genre.name%></h1>
-	<h3>List of Genre</h3>
 	
-	<a href="/artists/show<%= @genre.slug %>">
-		<%="#{@genre.artists[0].name}"%></a> - 
-	<a href="/genres/<%= @genre.slug %>"><%="#{@genre.songs[0].name}"%></a>
+	
+	<ul>
+		<h2>List of artists</h2>
+		<% @genre.artists.each do |artist|%>
+			<li>
+			<a href="/artists/<%= artist.slug %>"><%= artist.name %></a>
+			</li>
+		<%end%> 
+	</ul>
+	<ul>
+		<h2>List of songs</h2>
+		<% @genre.songs.each do |song|%>
+			<li>
+			<a href="/songs/<%= song.slug %>"><%= song.name %></a>
+			</li>
+		<%end%>
+	</ul>
+		
+
+	
 </body>
 </html>
