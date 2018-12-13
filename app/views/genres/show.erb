@@ -6,7 +6,6 @@
 <body>
 	<h1><%=@genre.name%></h1>
 	<h3>List of songs</h3>
-
 	<% @genre.songs.each do |sng| %>
 		<a href=<%="/songs/" + "#{sng.slug}"%>><%="#{sng.name}"%></a> by <a href=<%="/artists/" + "#{sng.artist.slug}" %>><%="#{sng.artist.name}"%></a></br>
 	<% end %>
