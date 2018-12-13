@@ -6,7 +6,9 @@
 <body>
 	<h1><%=@artist.name%></h1>
 	<h3>List of songs</h3>
-	<%"#{@artist.songs[0].name}"%>[<%="#{@artist.genres[0].name}"%>]
 	
+	<a href="/artists/<%= @artist.slug %>">
+		<%="#{@artist.songs[0].name}"%> [<%="#{@artist.genres[0].name}"%>]
+	</a>
 </body>
 </html>
