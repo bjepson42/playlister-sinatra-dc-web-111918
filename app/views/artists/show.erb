@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Artist</title>
+</head>
+<body>
+	<h1><%=@artist.name%></h1>
+	<h3>List of songs</h3>
+	<%"#{@artist.songs[0].name}"%>[<%="#{@artist.genres[0].name}"%>]
+	
+</body>
+</html>
